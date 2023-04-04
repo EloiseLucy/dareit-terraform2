@@ -13,6 +13,11 @@ resource "google_compute_instance" "dareit-vm-ci" {
       }
     }
   }
+  
+  resource "aws_s3_bucket" "bucket-lucy-1dareit" {
+  bucket = "bucket-lucy-1dareit"
+  acl    = "private"
+}
 
   network_interface {
     network = "default"
